@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#090b10" />
-  <title>Muhammadbek Rafiqov — Web developer & UI designer</title>
-  <meta name="description" content="Muhammadbek Rafiqov portfolio sayti: HTML, CSS, JavaScript va Figma bilan yaratilgan loyihalar." />
-  <meta property="og:title" content="Muhammadbek Rafiqov — Web developer & UI designer" />
-  <meta property="og:description" content="Figma'dagi g'oyalarni ishlaydigan saytlarga aylantiraman. Loyihalarim bilan tanishing." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090b10'/%3E%3Ctext x='32' y='43' font-size='30' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='%23d3ff5b'%3EMR%3C/text%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#05060a" />
+  <title>Muhammadbek Rafiqov — Designer & Developer</title>
+  <meta name="description" content="Muhammadbek Rafiqov: g'oyani dizaynga, dizaynni ishlaydigan saytga aylantiraman. Interaktiv portfolio." />
+  <meta property="og:title" content="Muhammadbek Rafiqov — Designer & Developer" />
+  <meta property="og:description" content="From idea to interface. Interaktiv cinematic portfolio." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305060a'/%3E%3Ctext x='32' y='43' font-size='30' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='%23d3ff5b'%3EMR%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -17,65 +16,135 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Asosiy qismga o'tish</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>
 
-  <header class="site-header">
+  <!-- INTRO CUTSCENE -->
+  <div class="intro" id="intro" aria-label="Kirish animatsiyasi">
+    <div class="bar top"></div><div class="bar bottom"></div>
+    <div class="intro-center">
+      <p class="intro-kicker">A CREATIVE DEVELOPER PORTFOLIO</p>
+      <h1 class="intro-name" id="introName" aria-label="Muhammadbek Rafiqov">MUHAMMADBEK RAFIQOV</h1>
+      <p class="intro-role">DESIGNER <i>✳</i> DEVELOPER</p>
+      <div class="intro-line"><i></i></div>
+    </div>
+    <button class="intro-skip" id="introSkip">O'tkazib yuborish <span aria-hidden="true">↗</span></button>
+  </div>
+
+  <header class="site-header" id="header">
     <a class="brand" href="#home" aria-label="Bosh sahifa"><span class="brand-mark">MR</span><span class="brand-text">Muhammadbek</span></a>
     <button class="menu-toggle" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
     <nav id="nav" class="nav" aria-label="Asosiy menyu">
-      <a href="#about">Men haqimda</a>
-      <a href="#skills">Ko'nikmalar</a>
-      <a href="#work">Loyihalar</a>
-      <a href="#process">Jarayon</a>
+      <a href="#story">Hikoya</a><a href="#about">Men haqimda</a><a href="#skills">Ko'nikmalar</a><a href="#work">Loyihalar</a>
       <a class="nav-cta" href="#contact">Bog'lanish</a>
     </nav>
   </header>
 
   <main id="main">
     <!-- HERO -->
-    <section class="hero wrap" id="home">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="dot"></span> Yangi loyihalar uchun ochiqman</p>
-        <h1>Salom, men <span class="accent">Muhammadbek</span>.<br />Web developer va UI designer.</h1>
-        <p class="lead">Figma'dagi g'oyalarni HTML, CSS va JavaScript bilan ishlaydigan, qulay saytlarga aylantiraman. CoddyCamp'da o'qiyman va har hafta yangi narsa yarataman.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#work">Loyihalarni ko'rish</a>
-          <a class="btn btn-ghost" href="#contact">Bog'lanish</a>
+    <section class="hero" id="home">
+      <canvas id="stars" aria-hidden="true"></canvas>
+      <div class="beam beam-a" aria-hidden="true"></div><div class="beam beam-b" aria-hidden="true"></div>
+      <div class="hero-inner wrap">
+        <div class="hero-copy">
+          <p class="eyebrow in-hero"><span class="dot"></span> Yangi loyihalar uchun ochiqman</p>
+          <h2 class="hero-title" aria-label="Men g'oyani interfeysga aylantiraman">
+            <span class="line"><span class="w" style="--i:0">Men</span> <span class="w" style="--i:1">g'oyani</span></span>
+            <span class="line"><span class="w grad" style="--i:2">interfeysga</span></span>
+            <span class="line"><span class="w" style="--i:3">aylantiraman.</span></span>
+          </h2>
+          <p class="lead in-hero">Salom, men Muhammadbek. Web developer va UI designer yo'lidaman: Figma'dagi g'oyalarni HTML, CSS va JavaScript bilan jonli saytlarga aylantiraman.</p>
+          <div class="actions in-hero">
+            <a class="btn btn-primary magnetic" href="#work">Loyihalarni ko'rish <span aria-hidden="true">↘</span></a>
+            <a class="btn btn-ghost magnetic" href="#story">Hikoyani boshlash <span aria-hidden="true">▶</span></a>
+          </div>
         </div>
-        <ul class="facts" aria-label="Qisqacha ma'lumot">
-          <li><b>1 yil</b> IT yo'nalishida</li>
-          <li><b>1</b> jonli loyiha</li>
-          <li><b>CoddyCamp</b> o'quvchisi</li>
-        </ul>
+        <div class="stage3d in-hero" id="stage3d" aria-hidden="true">
+          <div class="laptop" id="laptop">
+            <div class="lid">
+              <div class="bezel"><span class="cam"></span>
+                <div class="screen">
+                  <div class="scr-bar"><i></i><i></i><i></i><span>hello.js</span></div>
+                  <div class="code" id="code">
+                    <div class="cl" style="--n:19;--d:.2s"><span class="k">const</span> <span class="v">men</span> = {</div>
+                    <div class="cl" style="--n:26;--d:1s">  <span class="p">ism</span>: <span class="s">"Muhammadbek"</span>,</div>
+                    <div class="cl" style="--n:32;--d:2s">  <span class="p">stack</span>: <span class="s">["HTML","CSS","JS"]</span>,</div>
+                    <div class="cl" style="--n:19;--d:3.2s">  <span class="p">dizayn</span>: <span class="s">"Figma"</span></div>
+                    <div class="cl" style="--n:2;--d:4s">};</div>
+                    <div class="cl" style="--n:26;--d:4.4s"><span class="k">while</span> (men.<span class="p">qiziqish</span>) {</div>
+                    <div class="cl" style="--n:15;--d:5.4s">  <span class="v">yarat</span>();</div>
+                    <div class="cl" style="--n:1;--d:6.1s">}<b class="caret"></b></div>
+                  </div>
+                  <div class="scr-glow"></div><div class="scr-gloss"></div>
+                </div>
+              </div>
+            </div>
+            <div class="base"><span class="notch"></span></div>
+            <div class="laptop-shadow"></div>
+          </div>
+          <div class="chip chip-a">Figma → UI</div><div class="chip chip-b">Git &amp; GitHub</div><div class="chip chip-c">&lt;/&gt; HTML · CSS · JS</div>
+        </div>
       </div>
-      <div class="hero-art reveal" aria-hidden="true">
-        <div class="code-card">
-          <div class="card-top"><span class="win-dots"><i></i><i></i><i></i></span><span>hello.js</span></div>
-<pre><span class="c-purple">const</span> <span class="c-blue">men</span> = {
-  <span class="c-green">ism</span>: <span class="c-orange">"Muhammadbek"</span>,
-  <span class="c-green">stack</span>: <span class="c-orange">["HTML", "CSS", "JS"]</span>,
-  <span class="c-green">dizayn</span>: <span class="c-orange">"Figma"</span>
-};
-<span class="c-purple">while</span> (men.<span class="c-green">qiziqish</span>) {
-  <span class="c-blue">learn</span>();
-}</pre>
+      <a class="scroll-cue" href="#story" aria-label="Pastga aylantirish"><span></span>Scroll</a>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track">
+      <span>HTML <b>✳</b></span><span>CSS <b>✳</b></span><span>JAVASCRIPT <b>✳</b></span><span>FIGMA <b>✳</b></span><span>GIT &amp; GITHUB <b>✳</b></span><span>VERCEL <b>✳</b></span><span>AI TOOLS <b>✳</b></span>
+      <span>HTML <b>✳</b></span><span>CSS <b>✳</b></span><span>JAVASCRIPT <b>✳</b></span><span>FIGMA <b>✳</b></span><span>GIT &amp; GITHUB <b>✳</b></span><span>VERCEL <b>✳</b></span><span>AI TOOLS <b>✳</b></span>
+    </div></div>
+
+    <!-- CUTSCENE 1: STORY -->
+    <section class="story" id="story" aria-label="G'oyadan saytgacha: cutscene">
+      <div class="story-sticky" id="storyStage">
+        <div class="story-bg" aria-hidden="true"></div>
+        <div class="story-copy wrap">
+          <p class="label"><span>CUTSCENE</span> <b id="chNum">01</b> / 04</p>
+          <ol class="chapters" id="chapters">
+            <li class="on"><h2>G'oya.</h2><p>Hamma narsa bitta savoldan boshlanadi: nimani yaratsam foydali bo'ladi? Qog'ozga chizaman, o'ylayman.</p></li>
+            <li><h2>Dizayn.</h2><p>Figma'da tuzilma, ranglar va shriftlarni tanlayman. Har bir blok o'z joyini topadi.</p></li>
+            <li><h2>Kod.</h2><p>Dizayn HTML, CSS va JavaScript bilan jonlanadi: responsive, tez va qulay.</p></li>
+            <li><h2>Onlayn.</h2><p>GitHub va Vercel orqali sayt hamma uchun ochiladi. G'oya endi haqiqat.</p></li>
+          </ol>
+          <div class="story-progress" aria-hidden="true"><i id="storyBar"></i></div>
         </div>
-        <div class="chip chip-a">Figma → UI</div>
-        <div class="chip chip-b">Git &amp; GitHub</div>
+        <div class="story-device" aria-hidden="true">
+          <div class="halo"></div>
+          <div class="dev3d" id="dev">
+            <div class="dev-bar"><span class="win-dots"><i></i><i></i><i></i></span><span class="dev-url" id="devUrl">sketch.draft</span><b class="live">● LIVE</b></div>
+            <div class="dev-body">
+              <div class="bulb"></div>
+              <div class="px px-nav"><span></span><span></span><span></span></div>
+              <div class="px px-title"></div><div class="px px-title short"></div>
+              <div class="px px-img"></div>
+              <div class="px px-btn"></div>
+              <div class="px-row"><div class="px px-card"></div><div class="px px-card"></div><div class="px px-card"></div></div>
+              <div class="palette"><i></i><i></i><i></i><i></i></div>
+              <div class="code-panel">
+                <div class="cp"><span class="k">&lt;section</span> <span class="p">class</span>=<span class="s">"hero"</span><span class="k">&gt;</span></div>
+                <div class="cp">  <span class="k">&lt;h1&gt;</span>Salom!<span class="k">&lt;/h1&gt;</span></div>
+                <div class="cp">  <span class="k">&lt;a</span> <span class="p">href</span>=<span class="s">"#work"</span><span class="k">&gt;</span></div>
+                <div class="cp">.hero { <span class="p">display</span>: grid; }</div>
+                <div class="cp"><span class="k">const</span> <span class="v">go</span> = () =&gt; <span class="v">deploy</span>();</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section class="section wrap" id="about">
       <p class="label"><span>01</span> Men haqimda</p>
-      <div class="about-grid">
-        <h2 class="reveal">Kod bilan dizayn orasida.</h2>
-        <div class="about-text reveal">
-          <p>IT'ni bir yildan beri o'rganyapman va hozir CoddyCamp'da tahsil olaman. Web development va UI/UX dizayn menga g'oyani ko'rinadigan, ishlaydigan mahsulotga aylantirish imkonini beradi.</p>
-          <p>Frontend'da HTML, CSS va JavaScript, dizaynda Figma va Canva, kodni boshqarishda Git va GitHub bilan ishlayman. AI vositalarini yangi mavzularni tushunish va g'oya topish uchun ishlataman.</p>
-        </div>
+      <p class="big-text" id="bigText">Men IT'ni bir yildan beri o'rganyapman va hozir CoddyCamp'da tahsil olaman. Menga g'oyani ko'rinadigan, ishlaydigan mahsulotga aylantirish yoqadi. Har kuni bir qadam oldinga.</p>
+      <div class="stats">
+        <div class="stat glass"><strong><span data-count="1">0</span><em>+</em></strong><small>Yil IT yo'nalishida</small></div>
+        <div class="stat glass"><strong><span data-count="6">0</span><em>+</em></strong><small>Ishlatadigan vositalar</small></div>
+        <div class="stat glass"><strong><span data-count="1">0</span></strong><small>Jonli loyiha</small></div>
+        <div class="stat glass"><strong>∞</strong><small>Yangi g'oyalar</small></div>
       </div>
-      <div class="learn reveal">
-        <div class="learn-art" aria-hidden="true"><span>&lt;/&gt;</span></div>
+      <div class="learn glass tilt reveal">
+        <div class="learn-art" aria-hidden="true"><span>&lt;/&gt;</span><i></i><i></i></div>
         <div>
           <p class="mini">Mening o'quv maskanim</p>
           <h3>CoddyCamp'da har kuni o'sish</h3>
@@ -88,23 +157,22 @@
     <!-- SKILLS -->
     <section class="section wrap" id="skills">
       <p class="label"><span>02</span> Ko'nikmalar</p>
-      <h2 class="reveal">Ishlatadigan vositalarim</h2>
+      <h2 class="h-xl reveal">Mening <span class="grad">asboblarim</span></h2>
       <div class="cards">
-        <article class="card reveal"><span class="ico orange" aria-hidden="true">&lt;/&gt;</span><h3>Frontend</h3><p>Responsive va interaktiv sahifalar.</p><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></article>
-        <article class="card reveal"><span class="ico violet" aria-hidden="true">✳</span><h3>UI / UX dizayn</h3><p>Layout, rang va vizual ierarxiya.</p><ul class="tags"><li>Figma</li><li>Canva</li><li>Prototip</li></ul></article>
-        <article class="card reveal"><span class="ico green" aria-hidden="true">⌘</span><h3>Ish jarayoni</h3><p>Kodni saqlash va joylashtirish.</p><ul class="tags"><li>Git</li><li>GitHub</li><li>VS Code</li><li>Vercel</li></ul></article>
-        <article class="card reveal"><span class="ico blue" aria-hidden="true">✦</span><h3>AI bilan o'rganish</h3><p>Mavzularni tushunish va g'oya topish.</p><ul class="tags"><li>AI vositalar</li><li>Prompt</li><li>Tadqiqot</li></ul></article>
+        <article class="card glass tilt reveal"><span class="ico orange" aria-hidden="true">&lt;/&gt;</span><h3>Frontend</h3><p>Responsive va interaktiv sahifalar.</p><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><span class="idx">01</span></article>
+        <article class="card glass tilt reveal"><span class="ico violet" aria-hidden="true">✳</span><h3>UI / UX dizayn</h3><p>Layout, rang va vizual ierarxiya.</p><ul class="tags"><li>Figma</li><li>Canva</li><li>Prototip</li></ul><span class="idx">02</span></article>
+        <article class="card glass tilt reveal"><span class="ico green" aria-hidden="true">⌘</span><h3>Ish jarayoni</h3><p>Kodni saqlash va joylashtirish.</p><ul class="tags"><li>Git</li><li>GitHub</li><li>VS Code</li><li>Vercel</li></ul><span class="idx">03</span></article>
+        <article class="card glass tilt reveal"><span class="ico blue" aria-hidden="true">✦</span><h3>AI bilan o'rganish</h3><p>Mavzularni tushunish, g'oya topish.</p><ul class="tags"><li>AI vositalar</li><li>Prompt</li><li>Tadqiqot</li></ul><span class="idx">04</span></article>
       </div>
     </section>
 
     <!-- WORK -->
     <section class="section wrap" id="work">
       <p class="label"><span>03</span> Loyihalar</p>
-      <h2 class="reveal">Tanlangan ishlar</h2>
-
-      <article class="project reveal">
+      <h2 class="h-xl reveal">Tanlangan <span class="grad">ishlar</span></h2>
+      <article class="project glass reveal">
         <div class="project-visual" aria-hidden="true">
-          <div class="browser">
+          <div class="browser3d" id="browser3d">
             <div class="browser-bar"><span class="win-dots"><i></i><i></i><i></i></span><span class="url">teststudio-three.vercel.app</span></div>
             <div class="mock">
               <div class="mock-side"><b>T</b><i class="on"></i><i></i><i></i><i></i></div>
@@ -112,47 +180,45 @@
                 <div class="mock-hero"><u></u><u class="short"></u><s></s></div>
                 <div class="mock-stats"><span><b>1</b>Guruh</span><span><b>1</b>Mijoz</span><span><b>1</b>Test</span><span><b>0</b>Javob</span></div>
               </div>
+              <div class="mock-shine"></div>
             </div>
           </div>
         </div>
         <div class="project-info">
           <p class="mini">Web ilova · Boshqaruv paneli · 2026</p>
           <h3>TestStudio</h3>
-          <p>Psixolog amaliyoti uchun panel: guruhlar, mijozlar va testlarni bitta joyda boshqarish. Toza, xotirjam interfeys va qulay navigatsiya.</p>
+          <p>Psixolog amaliyoti uchun panel: guruhlar, mijozlar va testlarni bitta joyda boshqarish. Xotirjam, toza interfeys va qulay navigatsiya.</p>
           <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Dashboard</li></ul>
           <div class="actions">
-            <a class="btn btn-primary" href="https://teststudio-three.vercel.app/" target="_blank" rel="noreferrer noopener">Jonli saytni ochish <span aria-hidden="true">↗</span></a>
-            <a class="btn btn-ghost" href="https://figma.com/design/APcKf9DG2dAi5rSjq3SoSE/Untitled?node-id=0-1&amp;p=f&amp;t=cgsNk2TiR4i2nJWj-0" target="_blank" rel="noreferrer noopener">Figma dizayni <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-primary magnetic" href="https://teststudio-three.vercel.app/" target="_blank" rel="noreferrer noopener">Jonli saytni ochish <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-ghost magnetic" href="https://figma.com/design/APcKf9DG2dAi5rSjq3SoSE/Untitled?node-id=0-1&amp;p=f&amp;t=cgsNk2TiR4i2nJWj-0" target="_blank" rel="noreferrer noopener">Figma dizayni <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </article>
-
       <div class="cards two">
-        <a class="card link-card reveal" href="https://figma.com/design/qwR4a0eV4TF3X0Gq6zssJK/Untitled?node-id=0-1&amp;p=f&amp;t=V17utNDZGjCS2JSG-0" target="_blank" rel="noreferrer noopener"><span class="ico violet" aria-hidden="true">F</span><h3>Figma dizayn</h3><p>Yana bir interfeys dizayni loyihasi.</p><span class="go">Ochish ↗</span></a>
-        <a class="card link-card reveal" href="https://canva.link/uu9dnqly27g5teg" target="_blank" rel="noreferrer noopener"><span class="ico blue" aria-hidden="true">C</span><h3>Canva dizayn</h3><p>Vizual dizayn ishi.</p><span class="go">Ochish ↗</span></a>
+        <a class="card glass tilt link-card reveal" href="https://figma.com/design/qwR4a0eV4TF3X0Gq6zssJK/Untitled?node-id=0-1&amp;p=f&amp;t=V17utNDZGjCS2JSG-0" target="_blank" rel="noreferrer noopener"><span class="ico violet" aria-hidden="true">F</span><h3>Figma dizayn</h3><p>Yana bir interfeys dizayni loyihasi.</p><span class="go">Ochish ↗</span></a>
+        <a class="card glass tilt link-card reveal" href="https://canva.link/uu9dnqly27g5teg" target="_blank" rel="noreferrer noopener"><span class="ico blue" aria-hidden="true">C</span><h3>Canva dizayn</h3><p>Vizual dizayn ishi.</p><span class="go">Ochish ↗</span></a>
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section class="section wrap" id="process">
-      <p class="label"><span>04</span> Jarayon</p>
-      <h2 class="reveal">G'oyadan saytgacha</h2>
-      <ol class="steps">
-        <li class="reveal"><b>01</b><h3>G'oya</h3><p>Maqsad va foydalanuvchini aniqlayman.</p></li>
-        <li class="reveal"><b>02</b><h3>Dizayn</h3><p>Figma'da tuzilma, rang va shrift tanlayman.</p></li>
-        <li class="reveal"><b>03</b><h3>Kod</h3><p>HTML, CSS va JavaScript bilan yozaman.</p></li>
-        <li class="reveal"><b>04</b><h3>Joylashtirish</h3><p>GitHub va Vercel orqali onlayn chiqaraman.</p></li>
-      </ol>
+    <!-- CUTSCENE 2: OUTRO ZOOM -->
+    <section class="outro" id="outro" aria-label="Keyingi bob">
+      <div class="outro-sticky">
+        <div class="outro-glow" aria-hidden="true"></div>
+        <h2 class="outro-text" id="outroText" aria-label="Keep building">KEEP<br />BUILDING</h2>
+        <p class="outro-sub" id="outroSub">Keyingi bob — birga yozamiz ↓</p>
+      </div>
     </section>
 
     <!-- CONTACT -->
     <section class="section wrap" id="contact">
-      <div class="contact reveal">
-        <p class="label"><span>05</span> Bog'lanish</p>
-        <h2>G'oyangiz bormi?<br /><span class="accent">Keling, birga qilamiz.</span></h2>
-        <p>Hamkorlik, savol yoki shunchaki salom uchun yozing.</p>
+      <div class="contact glass reveal">
+        <div class="contact-glow" aria-hidden="true"></div>
+        <p class="label"><span>04</span> Bog'lanish</p>
+        <h2 class="h-xl">G'oyangiz bormi?<br /><span class="grad">Keling, birga qilamiz.</span></h2>
+        <p class="contact-sub">Hamkorlik, savol yoki shunchaki salom uchun yozing.</p>
         <div class="actions" id="contact-links">
-          <a class="btn btn-primary" href="https://github.com/kemboDev1" target="_blank" rel="noreferrer noopener">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-primary magnetic" href="https://github.com/kemboDev1" target="_blank" rel="noreferrer noopener">GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -160,9 +226,11 @@
 
   <footer class="site-footer wrap">
     <span>© <span id="year">2026</span> Muhammadbek Rafiqov</span>
-    <span>O'zbekistonda yaratilgan</span>
+    <span>O'rganishdan to'xtama <b class="accent">✳</b></span>
     <a href="#home">Tepaga ↑</a>
   </footer>
+
+  <button class="sound" id="sound" aria-pressed="false" aria-label="Ovozni yoqish"><span aria-hidden="true">♫</span> <b>Ovoz o'chiq</b></button>
   <script src="script.js"></script>
 </body>
 </html>
