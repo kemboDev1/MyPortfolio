@@ -4,84 +4,165 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#090b10" />
-  <meta name="description" content="CodyCamp’da tahsil olayotgan yosh web dasturchi va UI/UX dizayner portfolio sayti." />
-  <title>Muhammadbek Rafiqov — Designer & Developer</title>
+  <title>Muhammadbek Rafiqov — Web developer & UI designer</title>
+  <meta name="description" content="Muhammadbek Rafiqov portfolio sayti: HTML, CSS, JavaScript va Figma bilan yaratilgan loyihalar." />
+  <meta property="og:title" content="Muhammadbek Rafiqov — Web developer & UI designer" />
+  <meta property="og:description" content="Figma'dagi g'oyalarni ishlaydigan saytlarga aylantiraman. Loyihalarim bilan tanishing." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090b10'/%3E%3Ctext x='32' y='43' font-size='30' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='%23d3ff5b'%3EMR%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="motion.css" />
-  <link rel="stylesheet" href="extras.css" />
-  <link rel="stylesheet" href="finish.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <div class="intro-scene" id="intro-scene" aria-label="Portfolio cinematic opening">
-    <div class="intro-grid"></div><div class="intro-orb"><i>✳</i></div>
-    <span class="intro-float intro-float-one">&lt;design /&gt;</span><span class="intro-float intro-float-two">0101</span><span class="intro-float intro-float-three">idea → code</span>
-    <div class="intro-title"><span class="intro-kicker">A CREATIVE DEVELOPER PORTFOLIO</span><strong>Building ideas<br /><em>into experiences.</em></strong><span class="intro-byline">MUHAMMADBEK RAFIQOV · DESIGNER &amp; DEV</span></div>
-    <button class="intro-skip" id="intro-skip">Skip intro <span>↗</span></button><div class="intro-progress"><i></i></div>
-  </div>
+  <a class="skip-link" href="#main">Asosiy qismga o'tish</a>
+
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Bosh sahifa"><span class="brand-mark">A</span><span>portfolio<span class="brand-dot">.</span></span></a>
-    <button class="menu-toggle" aria-label="Menyuni ochish" aria-expanded="false"><span></span><span></span></button>
-    <nav class="nav-links" aria-label="Asosiy menyu"><a href="#about">Men haqimda</a><a href="#skills">Ko‘nikmalar</a><a href="#work">Loyihalar</a><a class="nav-contact" href="#contact">Bog‘lanish <span>↗</span></a></nav>
+    <a class="brand" href="#home" aria-label="Bosh sahifa"><span class="brand-mark">MR</span><span class="brand-text">Muhammadbek</span></a>
+    <button class="menu-toggle" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    <nav id="nav" class="nav" aria-label="Asosiy menyu">
+      <a href="#about">Men haqimda</a>
+      <a href="#skills">Ko'nikmalar</a>
+      <a href="#work">Loyihalar</a>
+      <a href="#process">Jarayon</a>
+      <a class="nav-cta" href="#contact">Bog'lanish</a>
+    </nav>
   </header>
-  <main>
-    <section class="hero section-wrap" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="live-dot"></span> O‘rganishda va yangi loyihalarga tayyor</div>
-        <div class="hero-name">RAFIQOV MUHAMMADBEK ULUG‘BEK O‘G‘LI <span>· 14 YOSH</span></div>
-        <h1>Salom, men <span class="gradient-text">Designer &amp; Dev</span></h1>
-        <p class="hero-subtitle">Men web developer va UI designer bo‘lish yo‘lida o‘rganyapman. Figma’dagi g‘oyalarni HTML, CSS va JavaScript bilan haqiqiy, interaktiv saytlarga aylantiraman.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#work">Loyihalarni ko‘rish <span>↘</span></a><a class="button button-quiet" href="#about">Men haqimda <span>↗</span></a></div>
-        <div class="hero-meta"><span><b>01</b> yil coding journey</span><i></i><span>CodyCamp student</span></div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero wrap" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="dot"></span> Yangi loyihalar uchun ochiqman</p>
+        <h1>Salom, men <span class="accent">Muhammadbek</span>.<br />Web developer va UI designer.</h1>
+        <p class="lead">Figma'dagi g'oyalarni HTML, CSS va JavaScript bilan ishlaydigan, qulay saytlarga aylantiraman. CoddyCamp'da o'qiyman va har hafta yangi narsa yarataman.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#work">Loyihalarni ko'rish</a>
+          <a class="btn btn-ghost" href="#contact">Bog'lanish</a>
+        </div>
+        <ul class="facts" aria-label="Qisqacha ma'lumot">
+          <li><b>1 yil</b> IT yo'nalishida</li>
+          <li><b>1</b> jonli loyiha</li>
+          <li><b>CoddyCamp</b> o'quvchisi</li>
+        </ul>
       </div>
-      <div class="hero-art" aria-label="Dasturlash va dizayn illyustratsiyasi">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orb-core"><span>✳</span></div>
-        <div class="float-card code-card"><div class="card-top"><span class="window-dots"><i></i><i></i><i></i></span><span>hello.js</span></div><pre><span class="code-purple">const</span> <span class="code-blue">creator</span> = {
-  <span class="code-green">curious</span>: <span class="code-orange">true</span>,
-  <span class="code-green">building</span>: <span class="code-orange">"web"</span>
+      <div class="hero-art reveal" aria-hidden="true">
+        <div class="code-card">
+          <div class="card-top"><span class="win-dots"><i></i><i></i><i></i></span><span>hello.js</span></div>
+<pre><span class="c-purple">const</span> <span class="c-blue">men</span> = {
+  <span class="c-green">ism</span>: <span class="c-orange">"Muhammadbek"</span>,
+  <span class="c-green">stack</span>: <span class="c-orange">["HTML", "CSS", "JS"]</span>,
+  <span class="c-green">dizayn</span>: <span class="c-orange">"Figma"</span>
 };
-<span class="code-purple">while</span> (creator.curious) {
-  <span class="code-blue">learn</span>();
-}</pre></div>
-        <div class="float-card design-card"><span class="design-icon">◈</span><span><b>Design mode</b><small>Figma · Canva</small></span><span class="design-arrow">↗</span></div>
-        <div class="spark spark-one">✦</div><div class="spark spark-two">✳</div>
-        <div class="float-chip chip-html">&lt;HTML /&gt;</div><div class="float-chip chip-js">JS ✳</div><div class="hero-caption"><span class="caption-line"></span> idea → design → code</div>
-      </div>
-      <a class="scroll-cue" href="#about"><span></span> Pastga aylantiring</a>
-    </section>
-    <section class="cutscene section-wrap" id="cutscene" aria-label="Cinematic portfolio scene">
-      <div class="scene-frame" id="scene-frame"><div class="scene-stars"></div><div class="scene-center"><span class="scene-mark">MR</span><span class="scene-caption" id="scene-caption">DESIGN · CODE · CREATE</span><span class="scene-title" id="scene-title">From idea<br /><em>to interface.</em></span><span class="scene-orbit"></span><span class="scene-orbit orbit-small"></span></div><div class="scene-float scene-float-a">&lt; HTML / CSS / JS &gt;</div><div class="scene-float scene-float-b">FIGMA ✳</div><div class="scene-float scene-float-c">GIT commit — first project</div><div class="scene-footer"><span>MUHAMMADBEK RAFIQOV</span><span>PORTFOLIO CUTSCENE <b id="scene-part">· 01 / 04</b></span></div><div class="scene-controls"><button class="scene-play" id="scene-play" aria-label="10 soniyalik cutscene’ni boshlash">▶</button><span class="scene-bar"><i id="scene-progress"></i></span><span id="scene-time">00:10</span><button class="scene-sound" id="scene-sound" aria-label="Ovoz yoqilgan" title="Ovoz yoqilgan">♫</button></div></div>
-      <div class="scene-note"><span class="live-dot"></span><span><b>THE CREATIVE DEV CUTSCENE</b><small>10 soniyalik motion scene · original web audio</small></span><span class="scene-status">PRESS PLAY</span></div>
-    </section>
-    <div class="ticker" aria-label="Dasturlash va dizayn yo‘nalishlari"><div class="ticker-track"><span>HTML <b>✳</b></span><span>CSS <b>✳</b></span><span>JAVASCRIPT <b>✳</b></span><span>FIGMA <b>✳</b></span><span>GIT &amp; GITHUB <b>✳</b></span><span>AI TOOLS <b>✳</b></span><span>VERCEL <b>✳</b></span><span>HTML <b>✳</b></span><span>CSS <b>✳</b></span><span>JAVASCRIPT <b>✳</b></span><span>FIGMA <b>✳</b></span><span>GIT &amp; GITHUB <b>✳</b></span><span>AI TOOLS <b>✳</b></span><span>VERCEL <b>✳</b></span></div></div>
-    <section class="about section-wrap" id="about">
-      <div class="section-label"><span>01</span> MEN HAQIMDA</div>
-      <div class="about-grid"><h2>Code bilan<br /><span class="muted-heading">design orasida.</span></h2><div class="about-text"><p>Men 14 yoshdaman, IT’ni bir yildan beri o‘rganyapman va hozir CodyCamp’da tahsil olaman. Web development va UI/UX design menga g‘oyalarni ko‘rinadigan, ishlaydigan mahsulotga aylantirish imkonini beradi.</p><p>Frontend’da HTML, CSS va JavaScript’dan foydalanaman. Design uchun Figma va Canva, version control uchun Git va GitHub bilan ishlayman. AI tools esa yangi mavzularni o‘rganish, g‘oya topish va ish jarayonini yaxshilashimga yordam beradi.</p><a class="text-link" href="#contact">Let’s build something cool <span>↗</span></a></div></div>
-      <div class="camp-card"><div class="camp-photo"><img class="camp-class-photo" src="https://static.tildacdn.one/tild3365-3337-4530-a234-666635626664/9Z5A2264-min.jpg" alt="CoddyCampdagi o‘quvchilar kompyuterda ishlamoqda" loading="lazy" /><div class="camp-photo-overlay"></div><div class="camp-photo-art"><span class="camp-ring"></span><span class="camp-star">✳</span><span class="camp-code">&lt; learn /&gt;</span><span class="camp-badge"><img src="https://static.tildacdn.one/tild3463-6463-4436-a166-373461346666/17.png" alt="CoddyCamp IT Academy" loading="lazy" /></span><span class="camp-spark">✦</span></div><div class="photo-caption">LEARN · BUILD · REPEAT</div></div><div class="camp-copy"><div class="camp-kicker"><span class="live-dot"></span> MY LEARNING SPACE</div><h3>CoddyCamp’da<br /><em>har kuni o‘sish.</em></h3><p>Bu yerda men coding asoslarini o‘rganib, ularni kichik loyihalar orqali amalda sinayman. Har bir yangi mavzu — portfolio’ga qo‘shiladigan yangi tajriba.</p><div class="camp-tags"><span>Frontend</span><span>Creative coding</span><span>Curiosity</span></div></div></div>
-      <div class="stats-row"><div class="stat"><strong>01<span>+</span></strong><small>Yil IT yo‘nalishida</small></div><div class="stat"><strong>05<span>+</span></strong><small>O‘rganilayotgan vositalar</small></div><div class="stat"><strong>∞</strong><small>Yangi g‘oyalar</small></div><div class="stat-note"><span class="note-star">✳</span><span>O‘rganaman.<br />Yarataman. O‘saman.</span></div></div>
-    </section>
-    <section class="skills section-wrap" id="skills">
-      <div class="section-label"><span>02</span> WHAT I WORK WITH</div><div class="section-heading"><h2>My toolkit<span class="gradient-text">.</span></h2><p>Hozir o‘rganayotgan va loyihalarda ishlatayotgan tool’larim.</p></div>
-      <div class="skills-grid">
-        <article class="skill-card"><div class="skill-icon orange">&lt;/&gt;</div><div><h3>Frontend Development</h3><p>Responsive va interaktiv web sahifalar qurish asoslari.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div><span class="card-index">01</span></article>
-        <article class="skill-card"><div class="skill-icon violet">✳</div><div><h3>UI / UX Design</h3><p>Layout, rang va vizual iyerarxiya bilan interfeys dizayni.</p><div class="tags"><span>Figma</span><span>Canva</span><span>Prototyping</span></div></div><span class="card-index">02</span></article>
-        <article class="skill-card"><div class="skill-icon green">⌘</div><div><h3>Developer Workflow</h3><p>Kod versiyalari va loyihalarni boshqarish uchun asosiy tool’lar.</p><div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Vercel</span></div></div><span class="card-index">03</span></article>
-        <article class="skill-card"><div class="skill-icon blue">✦</div><div><h3>AI-assisted Learning</h3><p>AI’dan mavzularni tushunish va ijodiy workflow’da foydalanaman.</p><div class="tags"><span>AI tools</span><span>Prompting</span><span>Research</span></div></div><span class="card-index">04</span></article>
+<span class="c-purple">while</span> (men.<span class="c-green">qiziqish</span>) {
+  <span class="c-blue">learn</span>();
+}</pre>
+        </div>
+        <div class="chip chip-a">Figma → UI</div>
+        <div class="chip chip-b">Git &amp; GitHub</div>
       </div>
     </section>
-    <section class="work section-wrap" id="work">
-      <div class="section-label"><span>03</span> TANLANGAN ISHLAR</div><div class="section-heading"><h2>Loyihalar<span class="gradient-text">.</span></h2><p>O‘rganganlarimni amaliy ishga aylantiryapman.</p></div>
-      <article class="project-card"><div class="project-visual teststudio-visual"><div class="browser-frame"><div class="browser-bar"><span class="window-dots"><i></i><i></i><i></i></span><span class="browser-url">TestStudio / Umumiy ko‘rinish</span><span class="browser-menu">•••</span></div><div class="mock-site"><aside class="mock-sidebar"><div class="mock-brand"><b>T</b><span>teststudio<small>AMALIYOT</small></span></div><div class="mock-heart">♥　Psixolog amaliyoti<small>　　Boshqaruv paneli</small></div><div class="mock-side-label">ISH MAYDONI</div><div class="mock-side-item active">⌂　 Umumiy ko‘rinish</div><div class="mock-side-item">♧　 Guruhlar</div><div class="mock-side-item">▤　 Testlar</div><div class="mock-side-item">◷　 Natijalar</div><div class="mock-side-item">♙　 Ishtirokchilar</div><div class="mock-side-item">＋　 Test yaratish</div><div class="mock-side-item">☷　 Sozlamalar</div></aside><div class="mock-dashboard"><div class="mock-topbar">TestStudio　›　 <b>Umumiy ko‘rinish</b><span>♙　AGW112　⌄　　● KEMBODev</span></div><div class="mock-welcome"><span class="mock-kicker">● PSIXOLOG AMALIYOTI</span><div class="mock-welcome-copy"><h3>Har bir kichik qadam<br /><em>— yaxshilanish sari.</em></h3><p>Mijozlaringiz uchun guruhlar va mulohaza testlarini qulay boshqaring.</p><button class="mock-cta">Test yaratish　↗</button>　<span class="mock-link">Guruhlarni ko‘rish　→</span></div><div class="mock-therapy"><div class="therapy-window">♧<br /><span>●　　 ●</span></div><div class="person person-one">●</div><div class="person person-two">●</div><div class="therapy-table"></div><div class="plant">♧</div></div><div class="mock-toast">♡　Xotirjam muhitda, o‘z sur’atingizda</div></div><div class="mock-stats"><div>♧　Guruhlar <b>1</b></div><div>♙　Mijozlar <b>1</b></div><div>▤　Testlar <b>1</b></div><div>⌁　Javoblar <b>0</b></div></div></div></div></div><div class="project-info"><div class="project-overline"><span>WEB APP · DASHBOARD UI</span><span>2026</span></div><h3>TestStudio</h3><p>Psixolog amaliyoti uchun boshqaruv paneli konsepti: guruhlar, mijozlar va testlarni bitta joyda boshqarish. Screenshot’dagi dark green interfeysga moslab portfolio uchun qayta chizilgan preview.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Dashboard</span></div><a class="project-link" href="https://figma.com/design/APcKf9DG2dAi5rSjq3SoSE/Untitled?node-id=0-1&p=f&t=cgsNk2TiR4i2nJWj-0" target="_blank" rel="noreferrer">Figma’da ochish <span>↗</span></a></div></article>
-      <div class="teststudio-live-link"><span class="live-dot"></span><span><b>TestStudio · Live project</b><small>Vercel’da ishlayotgan sayt</small></span><a href="https://teststudio-three.vercel.app/" target="_blank" rel="noreferrer">Saytni ochish <span>↗</span></a></div>
-      <div class="project-footnote"><span class="footnote-mark">✳</span><p>Yana loyihalarim ham bor — yangi ishlarimni muntazam qo‘shib boraman.</p><a href="https://figma.com/design/qwR4a0eV4TF3X0Gq6zssJK/Untitled?node-id=0-1&p=f&t=V17utNDZGjCS2JSG-0" target="_blank" rel="noreferrer">Yana bir Figma design <span>↗</span></a></div>
-      <div class="external-projects"><a href="https://canva.link/uu9dnqly27g5teg" target="_blank" rel="noreferrer"><span class="external-icon canva-icon">C</span><span><b>Canva Design</b><small>Visual project · Open design ↗</small></span></a><a href="https://coddycamp.uz/" target="_blank" rel="noreferrer"><span class="external-icon camp-icon">CC</span><span><b>My learning place</b><small>CoddyCamp IT Academy ↗</small></span></a></div>
+
+    <!-- ABOUT -->
+    <section class="section wrap" id="about">
+      <p class="label"><span>01</span> Men haqimda</p>
+      <div class="about-grid">
+        <h2 class="reveal">Kod bilan dizayn orasida.</h2>
+        <div class="about-text reveal">
+          <p>IT'ni bir yildan beri o'rganyapman va hozir CoddyCamp'da tahsil olaman. Web development va UI/UX dizayn menga g'oyani ko'rinadigan, ishlaydigan mahsulotga aylantirish imkonini beradi.</p>
+          <p>Frontend'da HTML, CSS va JavaScript, dizaynda Figma va Canva, kodni boshqarishda Git va GitHub bilan ishlayman. AI vositalarini yangi mavzularni tushunish va g'oya topish uchun ishlataman.</p>
+        </div>
+      </div>
+      <div class="learn reveal">
+        <div class="learn-art" aria-hidden="true"><span>&lt;/&gt;</span></div>
+        <div>
+          <p class="mini">Mening o'quv maskanim</p>
+          <h3>CoddyCamp'da har kuni o'sish</h3>
+          <p>Asoslarni o'rganib, ularni kichik loyihalarda sinayman. Har bir yangi mavzu portfolioga yangi tajriba qo'shadi.</p>
+          <a class="text-link" href="https://coddycamp.uz/" target="_blank" rel="noreferrer noopener">coddycamp.uz <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </section>
-    <section class="contact section-wrap" id="contact"><div class="contact-panel"><div class="contact-glow"></div><div class="section-label"><span>04</span> SAY-HI</div><h2>Have a cool idea?<br /><span class="gradient-text">Let’s make it real.</span></h2><p>Hamkorlik, savol yoki shunchaki salomlashish uchun yozing.</p><a class="button button-primary" href="mailto:hello@example.com">Get in touch <span>↗</span></a><span class="contact-note">Email manzilini o‘zingiznikiga almashtiring</span></div></section>
+
+    <!-- SKILLS -->
+    <section class="section wrap" id="skills">
+      <p class="label"><span>02</span> Ko'nikmalar</p>
+      <h2 class="reveal">Ishlatadigan vositalarim</h2>
+      <div class="cards">
+        <article class="card reveal"><span class="ico orange" aria-hidden="true">&lt;/&gt;</span><h3>Frontend</h3><p>Responsive va interaktiv sahifalar.</p><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></article>
+        <article class="card reveal"><span class="ico violet" aria-hidden="true">✳</span><h3>UI / UX dizayn</h3><p>Layout, rang va vizual ierarxiya.</p><ul class="tags"><li>Figma</li><li>Canva</li><li>Prototip</li></ul></article>
+        <article class="card reveal"><span class="ico green" aria-hidden="true">⌘</span><h3>Ish jarayoni</h3><p>Kodni saqlash va joylashtirish.</p><ul class="tags"><li>Git</li><li>GitHub</li><li>VS Code</li><li>Vercel</li></ul></article>
+        <article class="card reveal"><span class="ico blue" aria-hidden="true">✦</span><h3>AI bilan o'rganish</h3><p>Mavzularni tushunish va g'oya topish.</p><ul class="tags"><li>AI vositalar</li><li>Prompt</li><li>Tadqiqot</li></ul></article>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section wrap" id="work">
+      <p class="label"><span>03</span> Loyihalar</p>
+      <h2 class="reveal">Tanlangan ishlar</h2>
+
+      <article class="project reveal">
+        <div class="project-visual" aria-hidden="true">
+          <div class="browser">
+            <div class="browser-bar"><span class="win-dots"><i></i><i></i><i></i></span><span class="url">teststudio-three.vercel.app</span></div>
+            <div class="mock">
+              <div class="mock-side"><b>T</b><i class="on"></i><i></i><i></i><i></i></div>
+              <div class="mock-main">
+                <div class="mock-hero"><u></u><u class="short"></u><s></s></div>
+                <div class="mock-stats"><span><b>1</b>Guruh</span><span><b>1</b>Mijoz</span><span><b>1</b>Test</span><span><b>0</b>Javob</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <p class="mini">Web ilova · Boshqaruv paneli · 2026</p>
+          <h3>TestStudio</h3>
+          <p>Psixolog amaliyoti uchun panel: guruhlar, mijozlar va testlarni bitta joyda boshqarish. Toza, xotirjam interfeys va qulay navigatsiya.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Dashboard</li></ul>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://teststudio-three.vercel.app/" target="_blank" rel="noreferrer noopener">Jonli saytni ochish <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-ghost" href="https://figma.com/design/APcKf9DG2dAi5rSjq3SoSE/Untitled?node-id=0-1&amp;p=f&amp;t=cgsNk2TiR4i2nJWj-0" target="_blank" rel="noreferrer noopener">Figma dizayni <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <div class="cards two">
+        <a class="card link-card reveal" href="https://figma.com/design/qwR4a0eV4TF3X0Gq6zssJK/Untitled?node-id=0-1&amp;p=f&amp;t=V17utNDZGjCS2JSG-0" target="_blank" rel="noreferrer noopener"><span class="ico violet" aria-hidden="true">F</span><h3>Figma dizayn</h3><p>Yana bir interfeys dizayni loyihasi.</p><span class="go">Ochish ↗</span></a>
+        <a class="card link-card reveal" href="https://canva.link/uu9dnqly27g5teg" target="_blank" rel="noreferrer noopener"><span class="ico blue" aria-hidden="true">C</span><h3>Canva dizayn</h3><p>Vizual dizayn ishi.</p><span class="go">Ochish ↗</span></a>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section wrap" id="process">
+      <p class="label"><span>04</span> Jarayon</p>
+      <h2 class="reveal">G'oyadan saytgacha</h2>
+      <ol class="steps">
+        <li class="reveal"><b>01</b><h3>G'oya</h3><p>Maqsad va foydalanuvchini aniqlayman.</p></li>
+        <li class="reveal"><b>02</b><h3>Dizayn</h3><p>Figma'da tuzilma, rang va shrift tanlayman.</p></li>
+        <li class="reveal"><b>03</b><h3>Kod</h3><p>HTML, CSS va JavaScript bilan yozaman.</p></li>
+        <li class="reveal"><b>04</b><h3>Joylashtirish</h3><p>GitHub va Vercel orqali onlayn chiqaraman.</p></li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section wrap" id="contact">
+      <div class="contact reveal">
+        <p class="label"><span>05</span> Bog'lanish</p>
+        <h2>G'oyangiz bormi?<br /><span class="accent">Keling, birga qilamiz.</span></h2>
+        <p>Hamkorlik, savol yoki shunchaki salom uchun yozing.</p>
+        <div class="actions" id="contact-links">
+          <a class="btn btn-primary" href="https://github.com/kemboDev1" target="_blank" rel="noreferrer noopener">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer section-wrap"><a class="brand" href="#home"><span class="brand-mark">MR</span><span>portfolio<span class="brand-dot">.</span></span></a><span>O‘rganishdan to‘xtama <span class="footer-star">✳</span></span><span>© <span id="year"></span> · O‘zbekistonda yaratilgan</span></footer>
+
+  <footer class="site-footer wrap">
+    <span>© <span id="year">2026</span> Muhammadbek Rafiqov</span>
+    <span>O'zbekistonda yaratilgan</span>
+    <a href="#home">Tepaga ↑</a>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
